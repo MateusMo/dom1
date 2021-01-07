@@ -1,0 +1,79 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  width: 90vw;
+}
+
+.panel{
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active{
+  flex: 5;
+}
+
+.panel.active h3{
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4;
+}
+
+ @media(max-width: 480px){
+  .container{
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),.panel:nth-of-type(5){
+    display: none;
+  }
+}
+
+
+/* Background Images */
+
+#card1{
+  background-image: url('https://static.politifact.com/CACHE/images/politifact/photos/AP_20150285149411/ecc4f12d95ba369ae2e273945fd996bc.jpg')
+}
+#card2{
+  background-image: url('https://www.earthday.org/wp-content/uploads/2019/11/crowd-and-science-is-useful-black-white.jpg');
+}
+#card3{
+  background-image: url('https://static01.nyt.com/images/2017/01/22/us/22march8/22march8-jumbo.jpg');
+}
+#card4{
+  background-image: url('https://images.givelively.org/nonprofits/778da82f-78af-4c75-bf92-73708d44a1ad/campaigns/march-for-our-lives-la/background_images/march-for-our-lives-la_original_1521062307_background_image.png');
+}
+#card5{
+  background-image: url('https://ca-times.brightspotcdn.com/dims4/default/d1747eb/2147483647/strip/true/crop/2048x1152+0+68/resize/1200x675!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fe9%2F1c%2Ff67de326e3f1ed69ab290c5197a6%2Fla-oe-0306-engler-immigration-protests-2006-20-001');
+}
+
